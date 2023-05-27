@@ -8,6 +8,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ProductViewComponent } from './product-view/product-view.component';
 import { HeroSectionComponent } from './home/hero-section/hero-section.component';
+import { SubSectionComponent } from './home/sub-section/sub-section.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeroSectionComponent } from './home/hero-section/hero-section.component
     NotFoundComponent,
     ProductViewComponent,
     HeroSectionComponent,
+    SubSectionComponent,
   ],
   imports: [
     BrowserModule
