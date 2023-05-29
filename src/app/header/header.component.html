@@ -1,30 +1,19 @@
 <header class="site-header">
   <h1>
-    <button
-      aria-label="home"
-    ><img src="../../assets/images/justlikepeople.png" alt="Just Like People Logo" /></button>
+    <button aria-label="home"><img src="../../assets/images/justlikepeople.png"/></button>
   </h1>
   <mat-toolbar>
     <mat-toolbar-row>
-      <button
-        class="responsive-menu"
-        mat-button
-        (click)="sidenav.toggle()"
-      >
+      <button class="responsive-menu" mat-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-      <div
-        class="responsive-menu"
-      >
-        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+      <div class="responsive-menu">
         <nav>
           <ul>
             <li>
-              <button
-                class="menu-item"
-                mat-button
-                [matMenuTriggerFor]="menu"
-              >Products <span>&#8964;</span></button>
+              <button class="menu-item" mat-button [matMenuTriggerFor]="menu">
+                Products <span>&#8964;</span>
+              </button>
               <mat-menu class="menu-dropdown" #menu="matMenu">
                 <button mat-menu-item>Thing 1</button>
                 <button mat-menu-item>Thing 2</button>
@@ -32,10 +21,8 @@
               </mat-menu>
             </li>
             <li>
-              <button
-                class="menu-item"
-                mat-button
-              >Contact</button></li>
+              <button class="menu-item" mat-button>Contact</button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -46,14 +33,15 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav>
     <mat-nav-list>
-      <button (click)="sidenav.toggle()" mat-menu-item>Close</button>
-      <button mat-menu-item (click)="sidenav.toggle()">Contact</button>
       <button mat-menu-item (click)="sidenav.toggle()">Thing 1</button>
       <button mat-menu-item (click)="sidenav.toggle()">Thing 2</button>
       <button mat-menu-item (click)="sidenav.toggle()">Thing 3</button>
+      <button mat-menu-item (click)="sidenav.toggle()">Contact</button>
+      <button mat-menu-item (click)="sidenav.toggle()">Close</button>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 600px; text-align: center;">Page Content Goes Here</div>
+    <div style="height: 200px; text-align: center;">Page Content Goes Here</div>
+    <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
