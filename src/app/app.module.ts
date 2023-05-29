@@ -12,6 +12,7 @@ import { SubSectionComponent } from './home/sub-section/sub-section.component';
 import { CardComponent } from './home/sub-section/card/card.component';
 import { SideNavComponent } from './product-view/side-nav/side-nav.component';
 import { DetailViewComponent } from './product-view/detail-view/detail-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { DetailViewComponent } from './product-view/detail-view/detail-view.comp
     DetailViewComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
