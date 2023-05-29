@@ -10,6 +10,8 @@ import { ProductViewComponent } from './product-view/product-view.component';
 import { HeroSectionComponent } from './home/hero-section/hero-section.component';
 import { SubSectionComponent } from './home/sub-section/sub-section.component';
 import { CardComponent } from './home/sub-section/card/card.component';
+import { SideNavComponent } from './product-view/side-nav/side-nav.component';
+import { DetailViewComponent } from './product-view/detail-view/detail-view.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CardComponent } from './home/sub-section/card/card.component';
     HeroSectionComponent,
     SubSectionComponent,
     CardComponent,
+    SideNavComponent,
+    DetailViewComponent,
   ],
   imports: [
     BrowserModule
