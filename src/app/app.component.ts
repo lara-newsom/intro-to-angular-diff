@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'intro-to-angular';
+
+  myEventHandler(name: string){
+    console.log('Event was emitted with value ', name)
+  }
 }

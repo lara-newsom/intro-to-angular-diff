@@ -1,10 +1,16 @@
 <header class="site-header">
   <h1>
-    <button aria-label="home"><img src="../../assets/images/justlikepeople.png"/></button>
+    <button aria-label="home">
+      <img [src]="logoUrl"/>
+    </button>
   </h1>
   <mat-toolbar>
     <mat-toolbar-row>
-      <button class="responsive-menu" mat-button (click)="sidenav.toggle()">
+      <button
+        class="responsive-menu"
+        mat-button
+        (click)="sidenav.toggle()"
+      >
         <mat-icon>menu</mat-icon>
       </button>
       <div class="responsive-menu">
@@ -15,13 +21,24 @@
                 Products <span>&#8964;</span>
               </button>
               <mat-menu class="menu-dropdown" #menu="matMenu">
-                <button mat-menu-item>Thing 1</button>
-                <button mat-menu-item>Thing 2</button>
-                <button mat-menu-item>Thing 3</button>
+                <button
+                  (click)="clickMenuItem(menuItemOne)"
+                  mat-menu-item>{{ menuItemOne }}</button>
+                <button
+                  (click)="clickMenuItem('Thing 2')"
+                  mat-menu-item>Thing 2</button>
+                <button
+                  (click)="clickMenuItem('Thing 3')"
+                  mat-menu-item
+                >Thing 3</button>
               </mat-menu>
             </li>
             <li>
-              <button class="menu-item" mat-button>Contact</button>
+              <button
+                class="menu-item"
+                mat-button
+                (click)="clickMenuItem('contact')"
+              >Contact</button>
             </li>
           </ul>
         </nav>
@@ -41,7 +58,8 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 200px; text-align: center;">Page Content Goes Here</div>
     <ng-content></ng-content>
   </mat-sidenav-content>
 </mat-sidenav-container>
+
+

@@ -1,4 +1,9 @@
 <section class="main-content">
-  <app-header>
+  <app-header
+    (myEvent)="myEventHandler($event)"
+  >
+    <app-home></app-home>
   </app-header>
 </section>
+
+
